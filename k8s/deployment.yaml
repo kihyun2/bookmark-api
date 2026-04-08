@@ -14,7 +14,7 @@ spec:
     spec:
       initContainers:
         - name: migrate
-          image: kihyun1232/bookmark-api:latest
+          image: kihyun1232/bookmark-api:e1dd6a4a40d80fc95475dacf751fca6532a7bc4f
           command: ["npx", "prisma", "migrate", "deploy"]
           env:
             - name: DATABASE_URL
@@ -24,7 +24,7 @@ spec:
                   key: DATABASE_URL
       containers:
         - name: app
-          image: kihyun1232/bookmark-api:latest
+          image: kihyun1232/bookmark-api:e1dd6a4a40d80fc95475dacf751fca6532a7bc4f
           ports:
             - containerPort: 3000
           env:
