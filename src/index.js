@@ -6,7 +6,7 @@ const bookmarksRouter = require('./routes/bookmarks');
 const app = express();
 app.use(express.json());
 
-app.get('/health', (req, res) => res.json({ status: 'ok' }));
+app.get('/health', (req, res) => res.json({ status: 'ok', version: 'v2' }));
 app.use('/bookmarks', bookmarksRouter);
 
 const PORT = process.env.PORT || 3000;
