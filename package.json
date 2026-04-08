@@ -17,6 +17,7 @@
     "@opentelemetry/exporter-trace-otlp-http": "^0.214.0",
     "@opentelemetry/sdk-node": "^0.214.0",
     "@prisma/client": "^6.0.0",
+    "@prisma/instrumentation": "^7.7.0",
     "express": "^5.2.1"
   },
   "devDependencies": {

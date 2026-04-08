@@ -33,6 +33,8 @@ spec:
                 secretKeyRef:
                   name: bookmark-secret
                   key: DATABASE_URL
+            - name: OTEL_EXPORTER_OTLP_ENDPOINT
+              value: "http://otel-collector.default.svc.cluster.local:4318/v1/traces"
           livenessProbe:
             httpGet:
               path: /health
